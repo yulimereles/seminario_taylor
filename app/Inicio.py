@@ -39,6 +39,13 @@ def content():
         """
    ¡Bienvenido!
     Esta aplicación representa un proyecto en curso para compilar y analizar la discografía de canciones de Taylor Swift. Aquí encontrarás varios análisis exploratorios de datos de diferentes aspectos de las canciones de Taylor Swift, incluyendo cómo y cuándo se lanzan, con quién crea su música, y el tráfico de cada canción en Genius. A medida que Taylor lance más música, esta aplicación crecerá, con planes inmediatos para el análisis de sus letras usando NLP.
+
+    *INTEGRANTES DEL GRUPO*
+
+    1. Gonzalez, Malena, Fan N°1 <3
+    2. Villalba, Milagras.
+    3. Mereles, Juliana.
+    4. Rodas, Sofia. 
     """
     )
 
