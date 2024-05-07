@@ -155,7 +155,7 @@ def formats_pie(custom_params, df, wedge_values, wedge_labels, title, colors_lis
             row_color = [colors_list[i], 'white']
             colors.append(row_color)
             
-        table = ax.table(cellText=table_df.values, cellLoc='center', colLabels=['Format', 'Songs Released'],
+        table = ax.table(cellText=table_df.values, cellLoc='center', colLabels=['For', 'Songs Released'],
                   cellColours=colors, bbox=(1, 0.35, 0.5, 0.3))
         for (row, col), cell in table.get_celld().items():
             cell.set_text_props(fontproperties=FontProperties(size='large'))
@@ -358,5 +358,7 @@ def views_box(custom_params, df, x_values, y_values, title, x_label, y_label, bo
     
     if save_png == True:
         plt.savefig('figures/charts/{}'.format(png_name), bbox_inches='tight')
+    
+    
 
     return fig, ax

@@ -12,7 +12,7 @@ from matplotlib import rcParams
 from src import charts
 from src import toolkit
 
-st.set_page_config(page_title="Release Overview")
+st.set_page_config(page_title="Resumen de Lanzamientos")
 
 st.markdown(
     """

@@ -12,7 +12,7 @@ from matplotlib import rcParams
 from src import charts
 from src import toolkit
 
-st.set_page_config(page_title="Collaborators")
+st.set_page_config(page_title="Colaboradores")
 
 st.markdown(
     """
