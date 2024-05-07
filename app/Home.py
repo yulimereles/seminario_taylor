@@ -29,9 +29,6 @@ def sidebar():
         st.image('assets/img/TheTorturedPoetsDepartment.jpg')
         st.markdown("""
         <h3 style="text-align: center;">Discografía de canciones de Taylor Swift</h3>
-
-        <p style="text-align: center;">Este es un proyecto en curso y de código abierto. ¡Sigue el progreso en <a href='https://github.com/madroscla/taylor-swift-discography'>Github</a>!</p>
-
         <p style="text-align: center;">Los datos se actualizaron por última vez el <b>{}</b>.</p>
         
         """.format(today_format), unsafe_allow_html=True)

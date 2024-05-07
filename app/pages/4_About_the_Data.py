@@ -30,9 +30,6 @@ def sidebar():
         st.image('assets/img/TheTorturedPoetsDepartment.jpg')
         st.markdown("""
         <h3 style="text-align: center;">Discografía de Taylor Swift - Canciones</h3>
-
-        <p style="text-align: center;">Este es un proyecto en curso y de código abierto. ¡Sigue el progreso en <a href='https://github.com/madroscla/taylor-swift-discography'>Github</a>!</p>
-
         <p style="text-align: center;">Los datos fueron actualizados por última vez el <b>{}</b>.</p>
         
         """.format(today_format), unsafe_allow_html=True)
@@ -42,19 +39,15 @@ def content():
     st.markdown("""
     ## Acerca de los Datos
 
-    Todos los datos para este proyecto han sido extraídos de Genius utilizando el paquete de Python [parsel](https://parsel.readthedocs.io/en/latest/). Los datos se formatean en una base de datos SQLite, desde la cual se consultan todos los datos en esta aplicación. La base de datos tiene el siguiente formato:
+    Todos los datos para este proyecto han sido extraídos de Kanggle utilizando el paquete de Python [parsel](https://parsel.readthedocs.io/en/latest/). Los datos se formatean en una base de datos SQLite, desde la cual se consultan todos los datos en esta aplicación. La base de datos tiene el siguiente formato:
     """)
 
     st.image('figures/db_schema.png')
 
     st.markdown("""    
-    Por favor, revisa [este cuaderno en el Github del proyecto](https://github.com/madroscla/taylor-swift-discography/blob/main/notebooks/data_collection.ipynb) para obtener más detalles sobre cómo se obtuvieron los datos. 
     """)
 
     st.markdown("""
-    ## Vista previa de los datos
-
-    La base de datos utilizada en esta aplicación, así como las versiones en pickle de los datos, se pueden encontrar en el [repositorio de Github del proyecto](https://github.com/madroscla/taylor-swift-discography/tree/main/data). Los datos también están disponibles en formato CSV en [Kaggle](https://www.kaggle.com/datasets/madroscla/taylor-swift-released-song-discography-genius) para uso público bajo la licencia CC BY-SA 4.0.
     """)
 
     df = pd.read_pickle('data/taylor_swift_clean.pkl')

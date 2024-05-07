@@ -51,9 +51,6 @@ def sidebar():
         st.image('assets/img/TheTorturedPoetsDepartment.jpg')
         st.markdown("""
         <h3 style="text-align: center;">Discografía de Taylor Swift - Canciones</h3>
-
-        <p style="text-align: center;">Este es un proyecto en curso y de código abierto. ¡Sigue el progreso en <a href='https://github.com/madroscla/taylor-swift-discography'>Github</a>!</p>
-
         <p style="text-align: center;">Los datos fueron actualizados por última vez el <b>{}</b>.</p>
         
         """.format(today_format), unsafe_allow_html=True)
@@ -88,13 +85,13 @@ def content():
                         True, 'unique_credits_per_era.png', True, unique_credit_pivot)
     st.pyplot(credits_total_fig)
     
-    with st.expander("See discussion"):
+    with st.expander("Ver discusión"):
         st.write("""
             Al observar las barras, podemos ver claramente qué eras tuvieron más colaboradores únicos. Más que cualquier álbum o regrabación, Taylor trabaja con músicos más únicos cuando colabora en canciones de otros artistas o cuando crea canciones que no son parte de un álbum, ya que los totales de productores y artistas para lo primero y el total de escritores para lo segundo son más altos que cualquier otra era. Después de esos dos, está "Red (Versión de Taylor)", que tiene el segundo total más alto para cada artista y el tercero más alto tanto para productores como para escritores. Para los totales más bajos, "Speak Now (Versión de Taylor)" solo tiene 1 escritor único para la era, "Fearless" solo tiene 2 productores únicos y el álbum debut "Taylor Swift" solo tiene 1 artista único.
             
             Para determinar sus eras más y menos colaborativas, analizaremos dónde se encuentran los totales en relación con las medias generales por tipo (representadas por líneas horizontales punteadas). Para sus eras más colaborativas, tanto sus colaboraciones en canciones de otros artistas como sus trabajos no pertenecientes a álbumes están por encima de las medias para los tres tipos de músicos; "Red (Versión de Taylor)" también tiene totales por encima de las tres medias, siendo su único álbum de estudio o regrabación en lograrlo. Para las menos colaborativas, varias eras están por debajo de las medias generales para los tres tipos: el álbum homónimo "Taylor Swift", "Fearless", "Speak Now", "folklore", "evermore", "Speak Now (Versión de Taylor)", "1989 (Versión de Taylor)" y "The Tortured Poets Department". Esto dificulta determinar qué álbumes podrían considerarse los menos colaborativos.
             
-            También tengo otros problemas al determinar la colaboración a través de este enfoque: uno de ellos es que no tiene en cuenta la duración de los álbumes y cómo eso puede afectar los recuentos de músicos únicos. Por ejemplo, "Red (Versión de Taylor)" tiene más de 30 canciones asociadas con la era, mientras que "folklore" y "evermore" solo tienen 17 cada uno; incluso si "folklore" y "evermore" presentaran escritores, productores y/o artistas únicos para cada canción, aún es posible que queden por debajo de "Red (Versión de Taylor)" en totales debido a tener menos canciones en general. Además, este método no tiene en cuenta la variabilidad entre canciones individuales en cuanto a escritores, productores o artistas. Por ejemplo, "Midnights" presenta una pista, "Lavender Haze", que tiene solo 6 escritores únicos, mientras que también presenta una pista, "Bigger Than the Whole Sky", que es escrita únicamente por Taylor. Esa variación no se tiene en cuenta al sumar los escritores únicos entre las dos pistas, lo cual seguiría siendo un total de 6.a total of 6.
+            También tengo otros problemas al determinar la colaboración a través de este enfoque: uno de ellos es que no tiene en cuenta la duración de los álbumes y cómo eso puede afectar los recuentos de músicos únicos. Por ejemplo, "Red (Versión de Taylor)" tiene más de 30 canciones asociadas con la era, mientras que "folklore" y "evermore" solo tienen 17 cada uno; incluso si "folklore" y "evermore" presentaran escritores, productores y/o artistas únicos para cada canción, aún es posible que queden por debajo de "Red (Versión de Taylor)" en totales debido a tener menos canciones en general. Además, este método no tiene en cuenta la variabilidad entre canciones individuales en cuanto a escritores, productores o artistas. Por ejemplo, "Midnights" presenta una pista, "Lavender Haze", que tiene solo 6 escritores únicos, mientras que también presenta una pista, "Bigger Than the Whole Sky", que es escrita únicamente por Taylor. Esa variación no se tiene en cuenta al sumar los escritores únicos entre las dos pistas, lo cual seguiría siendo un total de 6.nicos entre las dos pistas, lo cual seguiría siendo un total de 6.a total of 6.
             
             Teniendo en cuenta estos problemas, llegué a mi segundo enfoque: calcular el promedio de cada tipo de músico por canción individual y comparar los promedios generales por era.
         """)

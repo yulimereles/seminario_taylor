@@ -45,9 +45,6 @@ def sidebar():
         st.image('assets/img/TheTorturedPoetsDepartment.jpg')
         st.markdown("""
         <h3 style="text-align: center;">Taylor Swift - Discografía de Canciones</h3>
-
-        <p style="text-align: center;">Este es un proyecto en curso y de código abierto. ¡Sigue el progreso en <a href='https://github.com/madroscla/taylor-swift-discography'>Github</a>!</p>
-
         <p style="text-align: center;">Los datos fueron actualizados por última vez el <b>{}</b>.</p>
         
         """.format(today_format), unsafe_allow_html=True)
@@ -107,7 +104,7 @@ def content():
                                                         'Month', 'Day of Month', True, 'most_frequent_dates.png', True, dates)
     st.pyplot(freq_dates_fig)
 
-    with st.expander("See discussion"):
+    with st.expander("Ver discusión"):
         st.write("""
             El patrón previamente observado de lanzamientos en octubre sigue apareciendo al trazar los meses de lanzamiento contra los días de lanzamiento, con tres fechas diferentes en octubre entre las 10 fechas de lanzamiento más frecuentes: 21/10, 22/10 y 27/10, siendo esta última la que tiene la mayor cantidad de lanzamientos de canciones. Los otros meses que tuvieron distribuciones de lanzamiento altas cuando se trazaron de forma independiente también aparecen en las 10 primeras: 9/4 y 19/4 para abril, 7/7 y 24/7 para julio, y 12/11 para noviembre. Estas fechas de lanzamiento también coinciden con el patrón de Taylor de lanzar música entre los días 19 y 27 del mes o dentro de las primeras dos semanas del mes.
             """)
